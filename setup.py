@@ -34,7 +34,6 @@ setup(
     install_requires=['nltk', 'scikit-learn', 'roman'],
     entry_points={'console_scripts': ['normalise=normalise.command_line:main']}
     cmdclass={
-        'develop': PostDevelopCommand,
         'install': PostInstallCommand,
     }
 )
