@@ -23,7 +23,7 @@ setup(
     platforms=['any'],
     packages=find_packages(exclude=['tests', 'evaluation']),
     include_package_data=True,
-    version='0.1.9',
+    version='0.2.0',
     summary='A module to normalise non-standard words in text',
     description=long_description,
     description_content_type='text/markdown',
