@@ -40,6 +40,7 @@ setup(
         "GNU General Public License v3 or later (GPLv3+)")
     ],
     install_requires=['nltk', 'scikit-learn', 'roman'],
+    setup_requires=['nltk'],
     entry_points={'console_scripts': ['normalise=normalise.command_line:main']},
     cmdclass={
         'install': PostInstallCommand
