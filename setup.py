@@ -5,6 +5,14 @@ from codecs import open
 from os import path
 from setuptools.command.develop import develop
 from setuptools.command.install import install
+import nltk
+
+
+class PostInstallCommand(install):
+    """Post-installation for installation mode."""
+    def run(self):
+        nltk.download("brown", "names", "wordnet", "averaged_perceptron_tagger", "universal_tagset")
+        install.run(self)
 
 here = path.abspath(path.dirname(__file__))
 
@@ -37,10 +45,3 @@ setup(
         'install': PostInstallCommand
     }
 )
-
-class PostInstallCommand(install):
-    """Post-installation for installation mode."""
-    def run(self):
-        nltk.download("brown", "names", "wordnet", "averaged_perceptron_tagger", "universal_tagset")
-        install.run(self)
-        
