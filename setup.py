@@ -10,9 +10,9 @@ from setuptools.command.install import install
 class PostInstallCommand(install):
     """Post-installation for installation mode."""
     def run(self):
+        install.run(self)
         import nltk
         nltk.download("brown", "names", "wordnet", "averaged_perceptron_tagger", "universal_tagset")
-        install.run(self)
 
 here = path.abspath(path.dirname(__file__))
 
