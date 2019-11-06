@@ -31,7 +31,6 @@ setup(
     author_email='elliot.ford@hotmail.co.uk',
     license="GPL",
     url='https://github.com/EFord36/normalise',
-    download_url='https://github.com/EFord36/normalise/tarball/0.1.9',
     keywords=['normalisation', 'text', 'pre-processing'],
     classifiers=[
         "Natural Language :: English",
